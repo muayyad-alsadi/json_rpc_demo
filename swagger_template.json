@@ -1,0 +1,26 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "JSON-RPC Demo",
+    "description": "JSON-RPC Demo",
+    "version": "1.0.0"
+  },
+  "servers": [{
+      "url": "{baseurl}/{path}",
+      "variables": {
+        "baseurl": {"default":"http://localhost:8080"},
+        "path": {"default":"rpc"}
+      }
+  }],
+  "tags": @TAGS@,
+  "paths": @PATHS@,
+  "components": {
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    },
+    "schemas": @SCHEMAS@
+  }
+}

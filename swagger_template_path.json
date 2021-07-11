@@ -1,0 +1,36 @@
+{
+    "post": {
+        "tags": ["tags"],
+        "security": [{"basicAuth":[]}],
+        "summary": "func",
+        "requestBody": {
+            "description": "JSON object",
+            "required": true,
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "properties": {
+                            "params": {
+                              "type": "object",
+                              "$ref": "func_in"
+                            }
+                        },
+                        "required": ["params"]
+                    }
+                }
+            }
+        },
+        "responses": {
+            "200": {
+                "description": "JSON object",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "func_out"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
